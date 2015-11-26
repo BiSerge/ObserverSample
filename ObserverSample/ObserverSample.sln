@@ -12,7 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "News", "News", "{3CB572AA-8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Widgets", "Widgets", "{9300D7F5-65E7-425F-86EA-A7632D5C3C1E}"
 	ProjectSection(SolutionItems) = preProject
+		IWidgets.cs = IWidgets.cs
 		LentaWidgets.cs = LentaWidgets.cs
+		TvitterWidgets.cs = TvitterWidgets.cs
 		TvWidgets.cs = TvWidgets.cs
 	EndProjectSection
 EndProject
