@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Class1
+namespace ObserverSample.News
 {
-	public Class1()
-	{
-	}
+
+    public class NewsAggregator
+    {
+        public NewsAggregator()
+        {
+        }
+    }
 }
