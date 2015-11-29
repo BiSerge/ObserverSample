@@ -11,5 +11,15 @@ namespace ObserverSample.Widgets
         public LentaWidgets()
         {
         }
+
+        public void Update()
+        {
+
+        }
+
+        public void Display()
+        {
+
+        }
     }
 }

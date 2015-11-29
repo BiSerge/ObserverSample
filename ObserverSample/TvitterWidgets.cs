@@ -11,5 +11,15 @@ namespace ObserverSample.Widgets
         public TvitterWidgets()
         {
         }
+
+        public void Update()
+        {
+
+        }
+
+        public void Display()
+        {
+
+        }
     }
 }

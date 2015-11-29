@@ -11,5 +11,15 @@ namespace ObserverSample.Widgets
         public TvWidgets()
         {
         }
+
+        public void Update()
+        {
+
+        }
+
+        public void Display()
+        {
+
+        }
     }
 }
