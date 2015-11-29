@@ -8,13 +8,9 @@ namespace ObserverSample.Widgets
 
     public class LentaWidgets
     {
-        public LentaWidgets()
+        public void Update(string tvitter, string lenta, string tv)
         {
-        }
-
-        public void Update()
-        {
-
+            Console.WriteLine("Lenta: {0}", lenta);
         }
 
         public void Display()

@@ -8,13 +8,9 @@ namespace ObserverSample.Widgets
 
     public class TvWidgets
     {
-        public TvWidgets()
+        public void Update(string tvitter, string lenta, string tv)
         {
-        }
-
-        public void Update()
-        {
-
+            Console.WriteLine("Tv: {0}", tv);
         }
 
         public void Display()

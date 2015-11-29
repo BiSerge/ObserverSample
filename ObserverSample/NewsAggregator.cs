@@ -52,6 +52,13 @@ namespace ObserverSample.News
             };
             return news[_random.Next(3)];
         }
+
+        public void NewNewsAvailable()
+        {
+            string tvitter = GetTvitterNews();
+            string lenta = GetLentaNews();
+            string tv = GetTvNews();
+        }
     }
 }
 
