@@ -24,16 +24,10 @@ namespace ObserverSample.News
 
     public class NewsAggregator
     {
-        //private static TvitterWidgets _tvitterWidgets;
-        //private static LentaWidgets _lentaWidgets;
-        //private static TvWidgets _tvWidgets;
         private static Random _random;
 
         public NewsAggregator()
         {
-            //_tvitterWidgets = new TvitterWidgets();
-            //_lentaWidgets = new LentaWidgets();
-            //_tvWidgets = new TvWidgets();
             _random = new Random();
         }
 
