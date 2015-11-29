@@ -8,7 +8,7 @@ namespace ObserverSample.News
 {
     public class NewsEventArgs
     {
-        NewsEventArgs(string tvitter, string lenta, string tv)
+        public NewsEventArgs(string tvitter, string lenta, string tv)
         {
             Tvitter = tvitter;
             Lenta = lenta;
@@ -24,18 +24,20 @@ namespace ObserverSample.News
 
     public class NewsAggregator
     {
-        private static TvitterWidgets _tvitterWidgets;
-        private static LentaWidgets _lentaWidgets;
-        private static TvWidgets _tvWidgets;
+        //private static TvitterWidgets _tvitterWidgets;
+        //private static LentaWidgets _lentaWidgets;
+        //private static TvWidgets _tvWidgets;
         private static Random _random;
 
         public NewsAggregator()
         {
-            _tvitterWidgets = new TvitterWidgets();
-            _lentaWidgets = new LentaWidgets();
-            _tvWidgets = new TvWidgets();
+            //_tvitterWidgets = new TvitterWidgets();
+            //_lentaWidgets = new LentaWidgets();
+            //_tvWidgets = new TvWidgets();
             _random = new Random();
         }
+
+        public event NewsChangedEventHandler NewsChanged;
 
         public string GetTvitterNews()
         {
@@ -52,9 +54,9 @@ namespace ObserverSample.News
         {
             var news = new List<String>
             {
-                "Новость Lenta из номер 1",
-                "Новость Lenta из номер 2",
-                "Новость Lenta из номер 3"
+                "Новость из Lenta номер 1",
+                "Новость из Lenta номер 2",
+                "Новость из Lenta номер 3"
             };
             return news[_random.Next(3)];
         }
@@ -63,9 +65,9 @@ namespace ObserverSample.News
         {
             var news = new List<String>
             {
-                "Новость Tv из номер 1",
-                "Новость Tv из номер 2",
-                "Новость Tv из номер 3"
+                "Новость из Tv номер 1",
+                "Новость из Tv номер 2",
+                "Новость из Tv номер 3"
             };
             return news[_random.Next(3)];
         }
@@ -76,9 +78,8 @@ namespace ObserverSample.News
             string lenta = GetLentaNews();
             string tv = GetTvNews();
 
-            _tvitterWidgets.Update(tvitter, lenta, tv);
-            _lentaWidgets.Update(tvitter, lenta, tv);
-            _tvWidgets.Update(tvitter, lenta, tv);
+            if (NewsChanged != null)
+                NewsChanged(this, new NewsEventArgs(tvitter, lenta, tv));
         }
     }
 }
