@@ -17,12 +17,16 @@ namespace ObserverSample
             var tvitterWidgets = new TvitterWidgets();
             var tvWidgets = new TvWidgets();
 
-            newsAggregator.NewsChanged += new NewsChangedEventHandler(lentaWidgets.Update);
-            newsAggregator.NewsChanged += new NewsChangedEventHandler(tvitterWidgets.Update);
-            newsAggregator.NewsChanged += new NewsChangedEventHandler(tvWidgets.Update);
+            newsAggregator.NewsChanged += lentaWidgets.Update;
+            newsAggregator.NewsChanged += tvitterWidgets.Update;
+            newsAggregator.NewsChanged += tvWidgets.Update;
 
             newsAggregator.NewNewsAvailable();
+
             Console.WriteLine();
+
+            newsAggregator.NewsChanged -= tvitterWidgets.Update;
+
             newsAggregator.NewNewsAvailable();
 
             Console.ReadKey();
