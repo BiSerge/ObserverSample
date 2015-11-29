@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ObserverSample.Widgest;
+using ObserverSample.Widgets;
 
 namespace ObserverSample.News
 {
@@ -25,9 +25,9 @@ namespace ObserverSample.News
         {
             var news = new List<String>
             {
-                "Новость Tvitter из номер 1",
-                "Новость Tvitter из номер 2",
-                "Новость Tvitter из номер 3"
+                "Новость из Tvitter номер 1",
+                "Новость из Tvitter номер 2",
+                "Новость из Tvitter номер 3"
             };
             return news[_random.Next(3)];
         }

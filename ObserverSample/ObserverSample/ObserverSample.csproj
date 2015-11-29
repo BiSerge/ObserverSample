@@ -58,6 +58,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="News\NewsAggregator.cs" />
+    <Compile Include="Widgets\LentaWidgets.cs" />
+    <Compile Include="Widgets\TvitterWidgets.cs" />
+    <Compile Include="Widgets\TvWidgets.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
