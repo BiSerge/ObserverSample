@@ -6,6 +6,22 @@ using ObserverSample.Widgets;
 
 namespace ObserverSample.News
 {
+    public class NewsEventArgs
+    {
+        NewsEventArgs(string tvitter, string lenta, string tv)
+        {
+            Tvitter = tvitter;
+            Lenta = lenta;
+            Tv = tv;
+        }
+
+        public string Tvitter { get; private set; }
+        public string Lenta { get; private set; }
+        public string Tv { get; private set; }
+    }
+
+    public delegate void NewsChangedEventHandler(object sender, NewsEventArgs e);
+
     public class NewsAggregator
     {
         private static TvitterWidgets _tvitterWidgets;
